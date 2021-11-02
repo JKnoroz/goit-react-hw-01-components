@@ -25,13 +25,9 @@ const FriendListItem = ({ avatar, name, isOnline }) => {
   );
 };
 
-// FriendList.propsType = {
-//   friends: PropsType.arrayOf(
-//     PropsType.shape({
-//       id: PropsType.string,
-//     }),
-//   ),
-// };
+FriendList.propsType = {
+  friends: PropsType.array,
+};
 
 FriendListItem.propsType = {
   avatar: PropsType.string,
