@@ -3,7 +3,7 @@ import s from './friends.module.css';
 
 const FriendList = ({ friends }) => {
   return (
-    <ul className="friend-list">
+    <ul className={s.friendList}>
       {friends.map(friend => (
         <FriendListItem
           key={friend.id}
@@ -18,10 +18,15 @@ const FriendList = ({ friends }) => {
 
 const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
-    <li className="item">
-      <span className="status">{isOnline}</span>
-      <img className="avatar" src={avatar} alt={name} width="48" />
-      <p className="name">{name}</p>
+    <li className={s.item}>
+      <span
+        className={s.status}
+        style={{ backgroundColor: isOnline ? '#32CD32' : '#FF0000' }}
+      >
+        {isOnline}
+      </span>
+      <img className={s.avatar} src={avatar} alt={name} width="48" />
+      <p className={s.name}>{name}</p>
     </li>
   );
 };

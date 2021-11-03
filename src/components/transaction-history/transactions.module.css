@@ -1,0 +1,14 @@
+.transactionHistory {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  border: solid 1px grey;
+  padding: 20px;
+}
+
+.tableRow {
+  border: 1px solid black;
+}
