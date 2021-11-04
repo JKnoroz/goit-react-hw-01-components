@@ -1,4 +1,4 @@
-// import PropsType from 'props-type';
+import PropTypes from 'prop-types';
 import s from './transactions.module.css';
 
 const TransactionHistory = ({ items }) => {
@@ -34,6 +34,17 @@ const TransactionItem = ({ id, type, amount, currency }) => {
       <td className={s.tableCell}>{currency}</td>
     </tr>
   );
+};
+
+TransactionHistory.propTypes = {
+  items: PropTypes.array,
+};
+
+TransactionItem.propTypes = {
+  id: PropTypes.string,
+  type: PropTypes.string,
+  amount: PropTypes.string,
+  currency: PropTypes.string,
 };
 
 export default TransactionHistory;

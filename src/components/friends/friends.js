@@ -1,4 +1,4 @@
-import PropsType from 'props-type';
+import PropTypes from 'prop-types';
 import s from './friends.module.css';
 
 const FriendList = ({ friends }) => {
@@ -31,14 +31,14 @@ const FriendListItem = ({ avatar, name, isOnline }) => {
   );
 };
 
-FriendList.propsType = {
-  friends: PropsType.array,
+FriendList.propTypes = {
+  friends: PropTypes.array,
 };
 
-FriendListItem.propsType = {
-  avatar: PropsType.string,
-  name: PropsType.string,
-  isOnline: PropsType.boolean,
+FriendListItem.propTypes = {
+  avatar: PropTypes.string,
+  name: PropTypes.string,
+  isOnline: PropTypes.bool,
 };
 
 export default FriendList;
